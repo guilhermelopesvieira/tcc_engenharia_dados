@@ -1,0 +1,12 @@
+-- Tabela Produtividade
+CREATE TABLE produtividade (
+    id_produtividade INT PRIMARY KEY,
+    id_projeto INT,
+    id_etapa INT,
+    atividade_diaria TEXT,
+    data_inicio DATETIME,
+    data_termino DATETIME,
+    percentual_avanco DECIMAL(5, 2),
+    FOREIGN KEY (id_projeto) REFERENCES projetos(id_projeto),
+    FOREIGN KEY (id_etapa) REFERENCES etapas(id_etapa)
+);

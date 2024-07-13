@@ -1,0 +1,10 @@
+-- Tabela Projetos
+CREATE TABLE projetos (
+    id_projeto INT PRIMARY KEY,
+    nome_projeto VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    data_inicio DATE NOT NULL,
+    data_termino DATE NOT NULL,
+    id_cliente INT,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+);

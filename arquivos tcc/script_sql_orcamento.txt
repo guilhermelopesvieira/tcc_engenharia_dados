@@ -1,0 +1,10 @@
+-- Tabela Orçamentos
+CREATE TABLE orcamentos (
+    id_orcamento INT PRIMARY KEY,
+    id_projeto INT,
+    id_etapa INT,
+    data_prevista DATE,
+    valor_orcado DECIMAL(10, 2),
+    FOREIGN KEY (id_projeto) REFERENCES projetos(id_projeto),
+    FOREIGN KEY (id_etapa) REFERENCES etapas(id_etapa)
+);

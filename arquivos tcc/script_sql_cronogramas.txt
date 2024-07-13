@@ -1,0 +1,11 @@
+-- Tabela Cronogramas
+CREATE TABLE cronogramas (
+    id_cronograma INT PRIMARY KEY,
+    id_projeto INT,
+    id_etapa INT,
+    responsavel VARCHAR(255),
+    data_inicio DATE NOT NULL,
+    data_termino DATE NOT NULL,
+    FOREIGN KEY (id_projeto) REFERENCES projetos(id_projeto),
+    FOREIGN KEY (id_etapa) REFERENCES etapas(id_etapa)
+);

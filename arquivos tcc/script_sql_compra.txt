@@ -1,0 +1,15 @@
+-- Tabela Compras
+CREATE TABLE compras (
+    id_compra INT PRIMARY KEY,
+    id_projeto INT,
+    id_fornecedor INT,
+    data_compra DATE,
+    data_entrega DATE,
+    id_insumo INT,
+    preco DECIMAL(10, 2),
+    juros DECIMAL(10, 2),
+    desconto DECIMAL(10, 2),
+    FOREIGN KEY (id_projeto) REFERENCES projetos(id_projeto),
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id_fornecedor),
+    FOREIGN KEY (id_insumo) REFERENCES insumos(id_insumo)
+);

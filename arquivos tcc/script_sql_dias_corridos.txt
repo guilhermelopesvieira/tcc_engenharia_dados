@@ -1,0 +1,17 @@
+-- Cria a tabela dias_corridos
+CREATE TABLE dias_corridos (
+    data DATE PRIMARY KEY,
+    dia INT NOT NULL,
+    mes INT NOT NULL,
+    ano INT NOT NULL
+);
+
+DECLARE @startDate DATE = '2024-01-01'; -- Data inicial
+DECLARE @endDate DATE = '2024-12-31';   -- Data final
+
+WHILE @startDate <= @endDate
+BEGIN
+    INSERT INTO dias_corridos (data, dia, mes, ano)
+    VALUES (@startDate, DAY(@startDate), MONTH(@startDate), YEAR(@startDate));
+    SET @startDate = DATEADD(DAY, 1, @startDate);
+END

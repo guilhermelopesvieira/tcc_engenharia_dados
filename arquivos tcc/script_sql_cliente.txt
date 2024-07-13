@@ -1,0 +1,11 @@
+-- Tabela Clientes
+CREATE TABLE clientes (
+    id_cliente INT PRIMARY KEY,
+    nome_cliente VARCHAR(255) NOT NULL,
+    cpf VARCHAR(11),
+    cnpj VARCHAR(14),
+    endereco TEXT,
+    telefone VARCHAR(15),
+    contato VARCHAR(255),
+    email VARCHAR(255)
+);

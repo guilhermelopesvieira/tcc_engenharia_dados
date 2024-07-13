@@ -1,0 +1,6 @@
+-- Tabela Insumos
+CREATE TABLE insumos (
+    id_insumo INT PRIMARY KEY,
+    nome_insumo VARCHAR(255) NOT NULL,
+    descricao TEXT
+);

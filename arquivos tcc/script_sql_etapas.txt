@@ -1,0 +1,4 @@
+CREATE TABLE etapas (
+    id_etapa INT PRIMARY KEY,
+    nome_etapa VARCHAR(255) NOT NULL
+);
